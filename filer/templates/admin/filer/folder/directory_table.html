@@ -12,7 +12,7 @@
                 <th class="column-icon">&nbsp;</th>
                 <th class="column-name">{% trans "Name" %}</th>
                 <th class="column-owner">{% trans "Owner" %}</th>
-                <th class="column-name">{% trans "name" %}</th>
+                <th class="column-description">{% trans "description" %}</th>
                 <th class="column-size">{% trans "Size" %}</th>
                 <th class="column-action">{% trans "Action" %}</th>
                 <th class="column-datetime">{% trans "uploaded at" %}</th>
@@ -133,8 +133,8 @@
                             <td class="column-owner">
                                 {{ file.owner|default:"n/a" }}
                             </td>
-                            <td class="column-namer">
-                                {{ file.name|default:"" }}
+                            <td class="column-description">
+                                {{ file.description|default:"" }}
                             </td>
                             <td class="column-size">
                                 <span class="tiny"> ({{ file.size|filesize:"auto1000long" }}{% ifequal file.file_type "Image" %}, {{ file.width }}x{{ file.height }} px{% endifequal %})</span>
